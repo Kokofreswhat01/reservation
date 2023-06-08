@@ -46,10 +46,18 @@ p,h1,h2,h3,h4,h5,h6{
     font-family: "Poppins";
 }
 
+
 h4{
     font-size: 26px;
 }
 
+h5{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+}
 .decon{
     width: 130px;
     height: 30px;
@@ -79,7 +87,7 @@ div .decon  :focus {
     height: 30px;
     margin: 1% 0px 0px 0px;
     border-radius: 10px;
-    border: 1px solid white;
+    background-color:  white;
 }
 
 .rev_person{
@@ -92,9 +100,9 @@ div .decon  :focus {
 
 .corps{
     width: 100%;
-    height: 700px;
+    height: 550px;
     background-color: #e7e7e7;
-    border: 1px solid rgb(230, 236, 243);
+    border: 1px solid #e7e7e7
 }
 
 .info_option{
@@ -136,7 +144,7 @@ div .decon  :focus {
 }
 
 .inpp{
-    width: 300px;
+    width: 500px;
     height: 60px;
     border: 3px solid #febb02;
 
@@ -146,7 +154,10 @@ div .decon  :focus {
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    margin-top: 12%;
+    margin-top: 11.2%;
+    height: 150px;
+    background-color: #e7e7e7;
+
     
 
 }
@@ -165,6 +176,7 @@ div .decon  :focus {
 
 .footer{
     width: 100%;
-    height: 155px;
+    height: 214px;
     background-color: #000;
+    margin-top: 7.33%;
 }

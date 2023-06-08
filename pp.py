@@ -1,1 +1,1 @@
-edbedcedegftegdejidu
+print("hello")
