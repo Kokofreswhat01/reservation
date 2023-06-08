@@ -1,0 +1,69 @@
+<html>
+<header>
+    <title>Shadow DOM</title>
+</header>
+<body>
+
+<div id="nameTag">Bobby</div>
+<template id="nameTagTemplate">
+    <style>
+    .outer {
+      border: 2px solid brown;
+      border-radius: 1em;
+      background: red;
+      font-size: 20pt;
+      width: 12em;
+      height: 7em;
+      text-align: center;
+    }
+    .boilerplate {
+      color: white;
+      font-family: sans-serif;
+      padding: 0.5em;
+    }
+    .name {
+      color: black;
+      background: white;
+      font-family: "Marker Felt", cursive;
+      font-size: 45pt;
+      padding-top: 0.2em;
+    }
+    </style>
+    <div class="outer">
+      <div class="boilerplate">
+        Hi! My name is
+      </div>
+      <div class="name"><content></content>
+      </div>
+    </div>
+</template>
+
+<script>
+    var shadow = document.querySelector('#nameTag').webkitCreateShadowRoot();
+    var template = document.querySelector('#nameTagTemplate');
+    shadow.appendChild(template.content);
+    template.remove();
+</script>
+<form action="." method="GET">
+<div id="calendar">
+        <input type="date" name="startDate" id="startDate"/>
+        <input type="submit" id="push"/>
+</div>
+</form>
+<template id="calendarTemplate">
+    <div>
+        <label for="startDate">Start:</label>
+        <content select="#startDate"></content>
+        <label for="endDate">End:</label>
+        <content select="#endDate"></content>
+        <content select="#push"></content>
+    </div>
+</template>
+<script>
+    var shadow = document.querySelector('#calendar').webkitCreateShadowRoot();
+    var template = document.querySelector('#calendarTemplate');
+    shadow.appendChild(template.content);
+    template.remove();
+</script>
+</body>
+</html>
