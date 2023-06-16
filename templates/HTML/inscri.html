@@ -17,10 +17,11 @@
           </a>
             <nav >
               
-              <li><a href="#">Accueil</a> </li> 
-              <li><a href="#">Contact</a> </li>
+              <li><a href="{{ url_for('index') }}">Accueil</a> </li> 
+              <li><a href="{{ url_for('contt') }}">Contact</a> </li>
               <li><a href="#" style="color: red;">S'inscrire</a> </li>
-              <li><a href="#" >Connexion</a> </li>
+              <li><a href="{{ url_for('coon') }}" >Connexion</a> </li>
+
                 
             </nav>
         </header>
@@ -28,20 +29,20 @@
         <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
         <div class="container" id="container">
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form method="post" action="#">
                     <h1>INSCRIPTION</h1>
-                    <input type="nom" name="Nom & Prénom" placeholder="Nom & Prénom *"/>
+                    <input type="text" name="nom" placeholder="Nom & Prénom *"/>
                     <input type="email" name="email" placeholder="Email *" />
                     <input type="password" name="mot_de_passe" placeholder="Mot de Passe *"/>
-                    <a href="#"><button>S'inscrire</button></a>
+                    <a href="{{ url_for('coon') }}"><button>S'inscrire</button></a>
                 </form>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-right">
                         <h1 style="color: black;">Bienvenue!</h1>
-                        <p style="color: black;">La Plateforme Qui Vous Permet De Reserver Vos Billets de Transport En Toute Simplicité .</p>
-                        <a href="#"><button class="ghost" id="signUp">Connexion</button></a>
+                        <p style="color: black;">La Plateforme Qui Vous Permet De Reserver Vos Destinations  En Toute Simplicité .</p>
+                        <a href="{{ url_for('coon') }}"><button class="ghost" id="signUp">Connexion</button></a>
                     </div>
                 </div>
             </div>

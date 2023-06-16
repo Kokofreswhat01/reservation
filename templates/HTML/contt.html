@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <meta charset ="utf-8">
+    <meta name ="viewport" content="width=device-width, intial-scale=1">
+    <title>Custom Coding</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../../static/CSS/contt.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <header style="height: 125px; background-color: #133f7e;">
+          <a href="#">
+            <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
+          </a>
+            <nav >
+              
+              <li><a href="{{ url_for('index') }}">Accueil</a> </li> 
+              <li><a href="#" style="color: red;">Contact</a> </li>
+              <li><a href="{{ url_for('inscri') }}">S'inscrire</a> </li>
+              <li><a href="{{ url_for('coon') }}" >Connexion</a> </li>
+                
+            </nav>
+        </header>
+
+        <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
+        <div>
+            <div class="container">
+                <div class="contact-parent">
+                    <div class="contact-child child1">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Address <br />
+                            <span> 01 BP 102 
+                                <br />
+                                Abidjan, CI
+                            </span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt"></i> Télephone <br />
+                            <span> 0787878787</span>
+                        </p>
+                        <p>
+                            <i class=" far fa-envelope"></i> Support général <br />
+                            <span>koko@rezerv.ci</span>
+                        </p>
+                    </div>
+                    <form method="post" class="contact-child child2">
+                        <div class="inside-contact">
+                            <h2>Contactez-Nous</h2>
+                            <h3>
+                                <span id="confirm">
+
+                            </h3>
+                            <p>Nom *</p>
+                            <input id="txt_name" name="nom" type="text" Required="required">
+                            <p>Email *</p>
+                            <input id="txt_email" name="email" type="text" Required="required">
+                            <p>Numero *</p>
+                            <input id="txt_phone" name="numero" type="text" Required="required">
+                            <p>Objet *</p>
+                            <input id="txt_subject" name="objet" type="text" Required="required">
+                            <p>Message *</p>
+                            <textarea id="txt_message" name="message" rows="4" cols="20" Required="required" ></textarea>
+                            <input type="submit" id="btn_send" value="ENVOYER">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+	<footer>
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
+		</ul>
+        <p style="margin-top: 3%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>
+	</footer>
+        
+  </body>
+</html>

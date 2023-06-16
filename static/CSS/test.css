@@ -16,6 +16,24 @@ html{
 ul, nav{
     list-style: none;
 }
+
+p,h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins";
+}
+
+
+h4{
+    font-size: 26px;
+}
+
+h5{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+}
+
 /*nav-bar style*/
 nav{
     list-style: none;
@@ -226,13 +244,6 @@ Cover and Image Animation configuration
             justify-content: center;
 }
 
-hr{
-    width: 100%;
-    height: 2px;
-    background-color: #3f51b5;
-    border: 0;
-    margin-bottom: 50px;
-}
 
 
 
@@ -266,6 +277,22 @@ section h3.title{
     font: bold 32px "Open Sans", sans-serif;
     margin-bottom: 30px;
     text-align: center;
+}
+
+.corps{
+    height: 703px;
+    background-color: #e3e5e3;
+
+}
+
+
+.corps2{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 200px;
+    border: 1px solid rgb(251, 250, 250);
+    margin-top: 0%;
 }
 
 
@@ -365,6 +392,7 @@ footer{
 	color: #fff;
 	background-color: #414a4f;
 	padding: 60px 0;
+    height: 220px;
 }
 
 footer ul{

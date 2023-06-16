@@ -17,9 +17,9 @@
           </a>
             <nav >
               
-              <li><a href="#">Accueil</a> </li> 
-              <li><a href="#">Contact</a> </li>
-              <li><a href="#">S'inscrire</a> </li>
+              <li><a href="{{ url_for('index') }}">Accueil</a> </li> 
+              <li><a href="{{ url_for('contt') }}">Contact</a> </li>
+              <li><a href="{{ url_for('inscri') }}">S'inscrire</a> </li>
               <li><a href="#" style="color: red;">Connexion</a> </li>
                 
             </nav>
@@ -30,11 +30,11 @@
             <div>
                 <div class="container" id="container">
                     <div class="form-container sign-in-container">
-                        <form action="#">
+                        <form method="post" action="#">
                             <h1>CONNEXION</h1>
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <a href="#"><button>Connexion</button></a>
+                            <input type="email" name="email" placeholder="Email" />
+                            <input type="password" name="mot_de_passe" placeholder="Mot de Passe" />
+                            <a href="{{ url_for('taxi') }}"><button>Connexion</button></a>
                         </form>
                     </div>
                     <div class="overlay-container">

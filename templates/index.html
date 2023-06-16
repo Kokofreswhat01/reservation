@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="../../static/CSS/test.css">
+      <link rel="stylesheet" href="../../static/CSS/style.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     
     </head>
@@ -17,16 +17,16 @@
           </a>
             <nav >
               
-              <li><a href="#">Accueil</a> </li> 
-              <li><a href="#">Contact</a> </li>
-              <li><a href="#">S'inscrire</a> </li>
-              <li><a href="#">Connexion</a> </li>
+              <li><a href="#" style="color: red;">Accueil</a> </li> 
+              <li><a href="{{ url_for('contt') }}">Contact</a> </li>
+              <li><a href="{{ url_for('inscri') }}">S'inscrire</a> </li>
+              <li><a href="{{ url_for('coon') }}">Connexion</a> </li>
                 
             </nav>
         </header>
             
             <section class="hero">
-            <div class="background-image" style="background-image: url(../../static/Images/route.jpg)"></div>
+            <div class="background-image" style="background-image: url(../../static/Images/route.jpg) ;"></div>
                 <div class="hero-content-area">
                 <h1 style="color: whitesmoke;">Re<span style="color: black;">Zer</span>V...</h1>
                     <h2 style="color: black;"> BIENVENUE DANS VOTRE PLATEFORME DE RESERVATION LA PLUS FIABLE</h2>
@@ -37,26 +37,37 @@
             </section>
         
         <section class="destinations">
-        <h3 class="title">Rest information will go here:</h3>
-            <p>blah blash blahs blahs blahss</p>
-            <hr>
+        <div class="corps2">
+          <div style="margin: 2%;">
+              <h5>Des Recompenses au gré de vos envies</h5>
+              <p>Allez-y quand et où vous voulez,<br> et profitez d'avantage</p>
+          </div>
+          <div style="margin: 2%;">
+              <h5>Devoilez des remises instantanées</h5>
+              <p>Economisez en moyenne 5% sur des <br> convoies avec les prix membres</p>
+              <a href="#" style="color: blue;">S'inscrire gratuitement</a>
+              <a href="#" style="color: blue;">Connexion</a>
+          </div>
+          <div style="margin: 2%;">
+              <h5>L'annulation est gratuite</h5>
+              <p>Profitez des reservations flexibles dans <br> la pluspart de ville</p>
+          </div>
+      </div>
+
            
         </section>
 
-
-
-
-
+        <section>
+        </section>
 
 
         <section class="contact">
-		<h3 class="title">Join our newsletter</h3>	
-		<p>Information will go here(if any)</p>
-		<hr>
+		<h3 class="title">Rejoignez notre newsletter</h3>	
+		<p>Les informations iront ici (le cas échéant)</p>
 
-		<form>
+		<form method="post">
 			<input type="email" placeholder="Email">
-			<a href="#" class="btn">Subscribe now</a>
+			<a href="#" class="btn">Soumettre</a>
 		</form>
 	</section>
 
@@ -68,8 +79,7 @@
 			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
 		</ul>
-		<p>Made by Pardeep Singh</p>
-		<p>No attribution required. you can remove this footer.</p>
+    <p style="color: white; margin: 3.2% 0% 0% 0%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>
 	</footer>
         
   </body>

@@ -118,122 +118,108 @@ header nav li{
     Contenu
 -------------*/
 
-p,h1,h2,h3,h4,h5,h6{
-    font-family: "Poppins";
+.container{
+    margin-top: 10%;
 }
 
-
-h4{
-    font-size: 26px;
-}
-
-h5{
-    font-size: 20px;
-}
-
-p{
-    font-size: 16px;
-}
-
-
-.reservation{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-
-}
-
-.rev_taxi{
-    width: 140px;
-    height: 30px;
-    margin: 1% 0px 0px 0px;
-    border-radius: 10px;
-    background-color:  white;
-}
-
-.rev_person{
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid white;
-    margin: 1% 0px 0px 5%;
-}
-
-.corps{
-    width: 100%;
-    height: 78.85vh;
-    background-color: #e7e7e7;
-    border: 1px solid #e7e7e7
-}
-
-.info_option{
-    margin: 8% 0% 0% 30%;
-    
-
-}
-
-.choix{
-    width: 20px;
-    height: 20px;
-    
-
-} 
-
-.option{
-    margin: 2% 85% 1% 0%;
-    display: flex;
-    justify-content: center;;
-
-}
-
-.tttttt{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.date{
-    width: 150px;
-    height: 60px;
-    border: 3px solid #febb02
-}
-
-.ssss{
-    width: 100px;
-    height: 60px;
-    border: 3px solid #febb02
-}
-
-.inpp{
-    width: 500px;
-    height: 60px;
-    border: 3px solid #febb02;
-
-}
-
-.bas{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    margin-top: 13%;
-    height: 150px;
-    background-color: #e7e7e7; 
-}
-
-
-.bas1{
-    display: flex;
-}
-
-.bas2{
-    display: flex;
-}
-
-.bas3{
-    display: flex;
-}
-
+.contact-parent{
+    display:flex;
+    margin: 0 auto;
+    width: 50%;
+  }
+  
+  .contact-child{
+    display:flex;
+    flex:1;
+    box-shadow:0px 0px 10px -2px rgba(0,0,0,0.75);
+  }
+  
+  .child1{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    color:#fff;
+    padding:100px 0;
+  }
+  
+  .child1 p{
+    padding-left:20%;
+    font-size:20px;
+    text-shadow:0px 0px 2px #000;
+  }
+  
+  .child1 p span{
+    font-size:16px;
+    color:#9df2fd;
+  }
+  
+  .child2{
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  
+  .inside-contact{
+    width:90%;
+    margin:0 auto;
+  }
+  
+  .inside-contact h2{
+    text-transform:uppercase;
+    text-align:center;
+    margin-top:0px;
+  }
+  
+  .inside-contact h3{
+    text-align:center;
+    font-size:16px;
+    color:#0085e2;
+  }
+  
+  .inside-contact input, .inside-contact textarea{
+    width:100%;
+    background-color:#eee;
+    border:1px solid rgba(0,0,0,0.48);
+    padding:5px 10px;
+    margin-bottom:20px;
+  }
+  
+  .inside-contact input[type=submit]{
+    background-color:#000;
+    color:#fff;
+    transition:0.2s;
+    border:2px solid #000;
+    margin:30px 0;
+  }
+  
+  .inside-contact input[type=submit]:hover{
+    background-color:#fff;
+    color:#000;
+    transition:0.2s;
+  }
+  
+  
+  @media screen and (max-width:991px){
+    .contact-parent{
+        display:block;
+        width:100%;
+    }
+  
+    .child1{
+        display:none;
+    }
+  
+    .child2{
+        background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+        background-size:cover;
+    }
+  
+    .inside-contact input, .inside-contact textarea{
+        background-color:#fff;
+    }
+  }
 
 /*-------------
  	Footer
@@ -254,7 +240,7 @@ footer{
 	color: #fff;
 	background-color: #414a4f;
 	padding: 60px 0;
-    margin-top: 0%;
+    margin-top: 5.81%;
     height: 220px;
 }
 
@@ -296,8 +282,3 @@ footer p a{
 	}
 
 }
-
-* {
-    margin: 0;
-    padding: 0;
-  }
