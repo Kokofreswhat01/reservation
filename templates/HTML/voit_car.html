@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="../../static/CSS/voit_car.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    
+      <title>LOCATION VOITURE/CAR</title>
     </head>
     <body>
         <header style="height: 125px; background-color: #133f7e;">
@@ -18,7 +18,7 @@
             <nav >
               
               <li><a href="#" >Taxi-Aéroport</a> </li> 
-              <li><a href="#" style="color: red;">Voiture/Car</a> </li>
+              <li><a href="#" style="color: red; font-weight: 900">Voiture/Car</a> </li>
               <li><a href="#" >Déconnexion</a> </li>
                 
             </nav>
@@ -26,29 +26,32 @@
 
         <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
         <div class="corps">
-            <div class="info_option">
-                <div class="info">
-                    <h4>Location de voiture pour tout type de trajet</h4>
-                    <p>Des offres exceptionnelles à des prix imbatables, proposées par les grandes sociétés de location de voitures.</p>
+            <div class="haut" >
+                <div class="info_option">
+                    <div class="info">
+                        <h4>Location de voiture pour tout type de trajet</h4>
+                        <p>Des offres exceptionnelles à des prix imbatables, proposées par les grandes sociétés de location de voitures.</p>
+                    </div>
+                    <div class="option">
+                        <p><input type="checkbox"  class="choix">Sens Unique</p>
+                        <p style="margin-left: 15px;"><input type="checkbox" class="choix">Aller-Retour</p>
+                    </div>
                 </div>
-                <div class="option">
-                    <p><input type="checkbox"  class="choix">Sens Unique</p>
-                    <p style="margin-left: 15px;"><input type="checkbox" class="choix">Retour</p>
-                </div>
+                <form method="post" class="tttttt">
+                    <input type="text" placeholder="Entrez le Lieu D'attente" class="inpp">
+                    <input type="text" placeholder="Personelle/Car" class="date">
+                    <input type="date" name="startDate"  placeholder="Date" class="date">
+                    <input type="text" placeholder="Heure du RDV" class="ssss">
+                    <input type="date" name="startDate date se remise"  placeholder="Date" class="date">
+                    <input type="text" placeholder="Heure de Remise" class="ssss">
+                    <input type="search" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;">
+                </form>
             </div>
-            <form method="post" class="tttttt">
-                <input type="text" placeholder="Entrez le Lieu D'attente" class="inpp">
-                <input type="text" placeholder="Personelle/Car" class="date">
-                <input type="date" name="startDate"  placeholder="Date" class="date">
-                <input type="text" placeholder="Heure du RDV" class="ssss">
-                <input type="date" name="startDate date se remise"  placeholder="Date" class="date">
-                <input type="text" placeholder="Heure de Remise" class="ssss">
-                <input type="search" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;">
-            </form>
             <div class="bas">
                 <div class="bas1" >
                     <div><i class="fa-regular fa-headset"></i></div>
                     <div>
+                        <img src="../../static/Images/CustomerService@2x.png" style="width: 8%;">
                         <h5>Nous sommes là pour vous</h5>
                         <p style="color: gray;">Fournir un support client dans plus de 30 <br> langues</p>
                     </div>
@@ -56,6 +59,7 @@
                 <div class="bas2">
                     <div><i class="fa-thin fa-circle-minus"></i></i></div>
                     <div> 
+                        <img src="../../static/Images/FreeCancellation@2x.png" style="width: 8%;">
                         <h5>Annulation gratuite</h5>
                         <p style="color: gray;">Sur la plupart des réservations, jusqu'à 48 <br> heures avant la prise en charge</p>
                     </div>
@@ -63,6 +67,7 @@
                 <div class="bas3">
                     <div><i class="fa-sharp fa-solid fa-thumbs-up"></i></div>
                     <div>
+                        <img src="../../static/Images/Reviews@2x.png" style="width: 8%;">
                         <h5>Plus de 5 millions d'avis</h5>
                         <p style="color: gray;">Par des clients vérifiés</p>
                     </div>
@@ -74,7 +79,7 @@
 			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+
 			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
 		</ul>
         <p style="margin-top: 3%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>

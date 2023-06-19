@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="../../static/CSS/taxi.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+      <title>LOCATION TAXI</title>
     
     </head>
     <body>
@@ -17,7 +18,7 @@
           </a>
             <nav >
               
-              <li><a href="#" style="color: red;">Taxi-Aéroport</a> </li> 
+              <li><a href="#" style="color: red; font-weight: 900;">Taxi-Aéroport</a> </li> 
               <li><a href="#">Voiture/Car</a> </li>
               <li><a href="{{url_for('coon')}}" >Déconnexion</a> </li>
                 
@@ -26,43 +27,45 @@
 
         <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
         <div class="corps">
-            <div class="info_option">
-                <div class="info">
-                    <i class="fa-duotone fa-plane"></i>
-                    <h4>Réservez Votre Taxi Aéroport</h4>
-                    <p>Transferts aéroport faciles depuis et vers votre logement</p>
+            <div class="haut">
+                <div class="info_option">
+                    <div class="info">
+
+                        <h4 style="color: black;">Réservez Votre Taxi Aéroport</h4>
+                        <p>Transferts aéroport faciles depuis et vers votre logement</p>
+                    </div>
+                    <div class="option">
+                        <p><input type="checkbox"  class="choix" style="color: black;">Sens Unique</p>
+                        <p style="margin-left: 30px;"><input type="checkbox" class="choix" style="color: black;">Aller-Retour</p>
+                    </div>
                 </div>
-                <div class="option">
-                    <p><input type="checkbox"  class="choix">Sens Unique</p>
-                    <p style="margin-left: 15px;"><input type="checkbox" class="choix">Retour</p>
-                </div>
+                <form method="post" class="tttttt">
+                    <input type="text" placeholder="Entrez le Lieu D'attente" class="inpp">
+                    <input type="text" placeholder="Entrez la Destination" class="inpp">
+                    <input type="date" name="startDate"  placeholder="Date" class="date">
+                    <input type="text" placeholder="Heure du RDV" class="ssss">
+                    <input type="number" placeholder="Passagers" class="ssss">
+                    <input type="submit" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;" class="se">
+                </form>
             </div>
-            <form method="post" class="tttttt">
-                <input type="text" placeholder="Entrez le Lieu D'attente" class="inpp">
-                <input type="text" placeholder="Entrez la Destination" class="inpp">
-                <input type="date" name="startDate"  placeholder="Date" class="date">
-                <input type="text" placeholder="Heure du RDV" class="ssss">
-                <input type="number" placeholder="Passagers" class="ssss">
-                <input type="search" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;">
-            </form>
             <div class="bas">
                 <div class="bas1">
-                    <div><i class="fa-solid fa-plane"></i></div>
                     <div>
+                        <img src="../../static/Images/glider-2818823_1280.jpg" style="width: 6%;">
                         <h5>Suivi des vols</h5>
                         <p style="color: gray;">Votre chauffeur suit votre vol et vous <br> attend s'il est retardé</p>
                     </div>
                 </div>
                 <div class="bas2">
-                    <div><i class="fa-regular fa-credit-card"></i></div>
                     <div>
+                        <img src="../../static/Images/credit-card-2010884_1280.jpg" style="width: 6%;">
                         <h5>Un prix clair</h5>
                         <p style="color: gray;">Votre prix est confirmé à l'avance - pas <br> de frais supplémentaires, pas d'espèces <br> requises</p>
                     </div>
                 </div>
                 <div class="bas3">
-                    <i class="fa-thin fa-circle-check"></i>
                     <div>
+                        <img src="../../static/Images/check-2935353_1280.png" style="width: 6%;">
                         <h5>Testé et approuvé</h5>
                         <p style="color: gray;">Nous travaillons avec des chauffeurs <br> professionnels et avons un service client <br> 24h/24 et 7j/7</p>
                     </div>
@@ -74,7 +77,7 @@
 			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
 			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+
 			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
 		</ul>
         <p style="margin-top: 3%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>
