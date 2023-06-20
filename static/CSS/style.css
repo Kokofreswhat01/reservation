@@ -82,7 +82,7 @@ Header Configurations
 */
 
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -184,20 +184,21 @@ Cover and Image Animation configuration
     background-image: url(../Images/bbb\ .png);
     }
     25%{
-       background-image: url(../Images/bus-ga50512f0d_1280.jpg);
+       background-image: url(../Images/bac1.jpg);
     }
     50%{
-        background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2020-12/11/full/1607655600-5776.jpg);
+        background-image: url(../Images/bac2.jpg);
         
     }
     75%{
-        background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+        background-image: url(../Images/bac3.jpg);
         
     }
     100%{
         background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
         
     }
+    
 }*/
 .hero h1{
     font: bold 60px "Open Sans", sans-serif;

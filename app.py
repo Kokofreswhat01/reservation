@@ -85,6 +85,39 @@ def voit_car():
     return render_template('HTML/voit_car.html')
 
 
+@app.route('/coon/taxi', methods=['GET', 'POST'])
+def rdv_taxi():
+    if request.method == 'POST':
+        lieu_attente = request.form['lieu_attente']
+        destination = request.form['destination']
+        date = request.form['startDate']
+        heure_rdv = request.form['heure_rdv']
+        passagers = request.form['passagers']
+        
+        # Faites ce que vous voulez avec les valeurs récupérées du formulaire
+        
+        return "Données du formulaire envoyées avec succès!"
+    
+    return render_template('HTML/taxi.html')
+
+
+@app.route('/coon/taxi/voit_car', methods=['GET', 'POST'])
+def rdv_voit_car():
+    if request.method == 'POST':
+        lieu_attente = request.form['lieu_att']
+        type_voiture = request.form['car_voit']
+        date = request.form['startDate']
+        heure_rdv = request.form['rdv']
+        date_remise = request.form['date_remise']
+        heure_remise = request.form['heure_re']
+        
+        # Faites ce que vous voulez avec les valeurs récupérées du formulaire
+        
+        return "Données du formulaire envoyées avec succès!"
+    
+    return render_template('HTML/voit_car.html')
+
+
 db.init_app(app)
 if __name__ == "__main__":
     db.create_all()
