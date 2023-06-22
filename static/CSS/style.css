@@ -201,13 +201,13 @@ Cover and Image Animation configuration
     
 }*/
 .hero h1{
-    font: bold 60px "Open Sans", sans-serif;
-    margin-bottom: 40px;
+    font: bold 40px "Poppins", sans-serif;
+    margin-bottom: 0px;
     color: white;
 }
 .hero h3{
-    font: normal 28px "Open Sans", sans-serif;
-    margin-bottom: 40px;
+    font: normal 20px "Poppins", sans-serif;
+    margin-bottom: 20px;
     color: white;
 }
 .hero a.btn{
@@ -215,7 +215,7 @@ Cover and Image Animation configuration
 }
 .hero-content-area{
     opacity: 0;
-    margin-top: 100px;
+    margin-top: 150px;
     -webkit-animation: 1s slidefade 1s forwards;
             animation: 1s slidefade 1s forwards;
 }
@@ -275,50 +275,20 @@ Section Configurations
 */
 section h3.title{
     text-transform: capitalize;
-    font: bold 32px "Open Sans", sans-serif;
-    margin-bottom: 30px;
+    font: bold 32px "Poppins", sans-serif;
     text-align: center;
 }
 
-.corps{
-    height: 703px;
-    background-color: #e3e5e3;
-
-}
 
 
 .corps2{
     display: flex;
+    background-color: grey;
     position: relative;
     justify-content: center;
-    height: 200px;
     border: 1px solid rgb(251, 250, 250);
-    margin-top: 0%;
+    margin-top: 14%;
 }
-
-
-.destinations .grid li{
-    height: 350px;
-    padding: 20px;
-    background-clip: content-box;
-    background-size: cover;
-    background-position: center;
-}
-
-.destinations .grid li.small{
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-}
-
-.destnations .grid li.large{
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-}
-
-
-
-
-
 
 
 /*---------------------
@@ -327,38 +297,22 @@ section h3.title{
 
 .contact{
 	background-color: #f7f7f7;
+
 }
 
-.contact form{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
 
-	max-width: 800px;
-	width: 80%;
-}
-
-.contact form input{
-	padding: 15px;
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	margin-right: 30px;
-	font-size: 18px;
-	color: #555;
+form input{
+    padding: 15px;
+    margin-right: 30px;
+    
 }
 
 .contact form .btn{
-	padding: 18px 42px;
+    width: 200px;
+    height: 18px;
+    cursor: pointer;
 }
+
 
 
 @media (max-width: 800px){
@@ -432,5 +386,42 @@ footer p a{
 	footer{
 		padding: 80px 15px;
 	}
+
+    nav li a{
+        font-size: 10px;
+        margin: 1%;
+    }
+
+    .background-image a{
+        font-size: 10px;
+    }
+
+    .innn{
+        width: 50%;
+    }
+
+    section h1{
+        font-size: 10px;
+    }
+
+    h5{
+        font-size: 14px;
+    }
+
+    h3{
+        font-size: 1px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    .corps2{
+        margin-top: 10%;
+    }
 
 }

@@ -22,6 +22,12 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/', methods=['GET', 'POST'])
+def newsletter():
+    email = request.form.get("email")
+    return render_template("accueil.html", email=email)
+
+
 @app.route('/coon', methods=['POST', 'GET'])
 def coon():
     if request.method == 'POST':
@@ -116,6 +122,9 @@ def rdv_voit_car():
         return "Données du formulaire envoyées avec succès!"
     
     return render_template('HTML/voit_car.html')
+
+
+
 
 
 db.init_app(app)
