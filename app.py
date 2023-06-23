@@ -1,10 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
 db = SQLAlchemy()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'  # Configuration de la base de données SQLite
+
+app.secret_key = "votre_clé_secrète"
 
 
 class User(db.Model):
@@ -38,11 +40,15 @@ def coon():
         # Vérifier les informations de connexion
         user = User.query.filter_by(email=email).first()
 
-        # Si les informations sont valides, rediriger vers la page d'accueil
         if user and user.password == password:
+            # Connexion réussie, afficher un message flash avec le nom de l'utilisateur
+            flash(f'Bienvenue, {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
             return render_template('HTML/taxi.html')
+
+        # Informations de connexion invalides, afficher un message d'erreur
+        flash('Email ou mot de passe incorrect.')
+
     return render_template('HTML/coon.html')
-    #return render_template('index.html')
 
 
 @app.route('/inscri', methods=['POST', 'GET'])
@@ -60,7 +66,8 @@ def inscri():
 @app.route('/logout')
 def logout():
     # Supprimez l'utilisateur de la session pour le déconnecter
-    db.session.pop('username', None)
+    db.session.pop('name', None)
+    flash('Vous avez été deconnecté avec succès!!!!')
     return redirect(url_for('coon'))
 
 
@@ -83,6 +90,8 @@ def contt():
 
 @app.route('/coon/taxi')
 def taxi():
+    #flash(f'Bienvenue, {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
+            
     return render_template('HTML/taxi.html')
 
 

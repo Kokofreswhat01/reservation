@@ -25,58 +25,62 @@
         </header>
 
         <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
-        <div class="corps">
-            <div class="haut" >
-                <div class="info_option">
-                    <div class="info">
-                        <h4>Location de voiture pour tout type de trajet</h4>
-                        <p>Des offres exceptionnelles à des prix imbatables, proposées par les grandes sociétés de location de voitures.</p>
+        <main>
+            <div class="corps">
+                <div class="haut" >
+                    <div class="info_option">
+                        <div class="info">
+                            <h4>Location de voiture pour tout type de trajet</h4>
+                            <p>Des offres exceptionnelles à des prix imbatables, proposées par les grandes sociétés de location de voitures.</p>
+                        </div>
+                        <div class="option">
+                            <input type="radio"  class="choix" name="option">
+                            <label for="option1">Sens Unique</label>
+    
+                            <input type="radio" class="choix" name="option" style="margin-left: 15px;">
+                            <label for="option2">Aller-Retour</label>
+                        </div>
                     </div>
-                    <div class="option">
-                        <input type="radio"  class="choix" name="option">
-                        <label for="option1">Sens Unique</label>
+                    <form method="post" class="tttttt">
+                        <input type="text" name="lieu_att" placeholder="Entrez le Lieu D'attente" class="inpp">
+                        <input type="text" name="car_voit" placeholder="Personelle/Car" class="date">
+                        <input type="date" name="startDate"  placeholder="Date" class="date" >
+                        <input type="time" name="rdv" placeholder="Heure du RDV" class="ssss">
+                        <input type="date" name="date_remise"  placeholder="Date" class="date">
+                        <input type="time" name="heure_re" placeholder="Heure de Remise" class="ssss">
+                        <input type="submit" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;">
+                    </form>
+                </div>
+                <div class="bas">
+                    <div class="bas1" >
+                        
+                        <div>
+                            <img src="../../static/Images/CustomerService@2x.png" style="width: 8%;">
+                            <h5>Nous sommes là pour vous</h5>
+                            <p style="color: gray;">Fournir un support client dans plus de 30 <br> langues</p>
+                        </div>
+                    </div>
+                    <div class="bas2">
+                        
+                        <div> 
+                            <img src="../../static/Images/FreeCancellation@2x.png" style="width: 8%;">
+                            <h5>Annulation gratuite</h5>
+                            <p style="color: gray;">Sur la plupart des réservations, jusqu'à 48 <br> heures avant la prise en charge</p>
+                        </div>
+                    </div>
+                    <div class="bas3">
+                        
+                        <div>
+                            <img src="../../static/Images/Reviews@2x.png" style="width: 8%;">
+                            <h5>Plus de 5 millions d'avis</h5>
+                            <p style="color: gray;">Par des clients vérifiés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-                        <input type="radio" class="choix" name="option" style="margin-left: 15px;">
-                        <label for="option2">Aller-Retour</label>
-                    </div>
-                </div>
-                <form method="post" class="tttttt">
-                    <input type="text" name="lieu_att" placeholder="Entrez le Lieu D'attente" class="inpp">
-                    <input type="text" name="car_voit" placeholder="Personelle/Car" class="date">
-                    <input type="date" name="startDate"  placeholder="Date" class="date" >
-                    <input type="time" name="rdv" placeholder="Heure du RDV" class="ssss">
-                    <input type="date" name="date_remise"  placeholder="Date" class="date">
-                    <input type="time" name="heure_re" placeholder="Heure de Remise" class="ssss">
-                    <input type="submit" value="Trouver" style="width: 130px; height: 60px; background-color: #0071c2; border: 3px solid #febb02; color: aliceblue; font-size: 22px; cursor: pointer;">
-                </form>
-            </div>
-            <div class="bas">
-                <div class="bas1" >
-                    
-                    <div>
-                        <img src="../../static/Images/CustomerService@2x.png" style="width: 8%;">
-                        <h5>Nous sommes là pour vous</h5>
-                        <p style="color: gray;">Fournir un support client dans plus de 30 <br> langues</p>
-                    </div>
-                </div>
-                <div class="bas2">
-                    
-                    <div> 
-                        <img src="../../static/Images/FreeCancellation@2x.png" style="width: 8%;">
-                        <h5>Annulation gratuite</h5>
-                        <p style="color: gray;">Sur la plupart des réservations, jusqu'à 48 <br> heures avant la prise en charge</p>
-                    </div>
-                </div>
-                <div class="bas3">
-                    
-                    <div>
-                        <img src="../../static/Images/Reviews@2x.png" style="width: 8%;">
-                        <h5>Plus de 5 millions d'avis</h5>
-                        <p style="color: gray;">Par des clients vérifiés</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 	<footer>
 		<ul>
 			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>

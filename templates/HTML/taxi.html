@@ -26,7 +26,18 @@
         </header>
 
         <!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
+    <main>
         <div class="corps">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+           {% endwith %}
+
             <div class="haut">
                 <div class="info_option">
                     <div class="info">
@@ -75,6 +86,7 @@
                 </div>
             </div>
         </div>
+    </main>
 	<footer>
 		<ul>
 			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
