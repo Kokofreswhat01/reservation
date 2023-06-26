@@ -8,8 +8,9 @@
 
 html {
     font: normal 16px sans-serif;
-    color: #555;
+
 }
+
 
 body{
     width: 100%;
@@ -162,7 +163,7 @@ p {
 }
 
 .haut {
-    background: url(../Images/Taxi_Barcelona_c1.jpeg) no-repeat center center;
+    background: url(../Images_1/vvvv.jpeg) no-repeat center center;
     background-size: cover;
     margin-top: 6.07%;
     height: 480px;
@@ -210,15 +211,13 @@ p {
 
 .bas {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     height: 145px;
-    margin-left: 10%;
 
 }
 
 .bas1 {
     display: flex;
-
 }
 
 .bas2 {

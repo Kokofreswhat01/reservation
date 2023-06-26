@@ -23,6 +23,10 @@ class User(db.Model):
 def index():
     return render_template('index.html')
 
+@app.route('/car', methods=['GET', 'POST'])
+def car():
+    return render_template('HTML/car.html')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def newsletter():
