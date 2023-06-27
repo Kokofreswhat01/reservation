@@ -156,7 +156,7 @@ p {
 
 .corps {
     width: 100%;
-    height: 78.85vh;
+    height: 79.5vh;
     
     background-color: #e7e7e7;
     border: 1px solid #e7e7e7;
@@ -213,6 +213,7 @@ p {
     display: flex;
     justify-content: space-around;
     height: 145px;
+    margin: 2% 0 0 8%;
 
 }
 

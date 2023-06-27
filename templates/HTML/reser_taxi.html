@@ -3,17 +3,17 @@
   <head>
     <meta charset ="utf-8">
     <meta name ="viewport" content="width=device-width, intial-scale=1">
-    <title>Custom Coding</title>
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../static/CSS_1/reserv_taxi.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    <title>LOCATION VOITURE/CAR</title>
+    <title>RESERVATION TAXI</title>
 </head>
 <body>
     <header style="height: 125px; background-color: #133f7e;">
-        <a href="#">
+        <a href="{{ url_for('index') }}">
           <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
         </a>
           <nav >
@@ -25,34 +25,62 @@
           </nav>
       </header>
        <main>
-        <div class="touss">
-          <div style="width: 20%; height: 15vh; border: 1px solid rgb(146, 145, 145); border-radius: 10px; margin-top: 10%;">
-            <h3>Stratégie</h3>
-            <h5 style="margin-top: 8%;">Annulation Gratuite</h5>
-            <p style="margin-top: 5%; ">Annulez gratuitement jusqu'à 24 <br> heures avant votre départ</p>
-          </div>
-          <div style="width: 70%;">
-            <div class="description">
-              <h3>Standard</h3>
-              <a href="#">
-                <input type="submit" value="Continuer">
-              </a>
-            </div>
-            <div class="description">
-              <h3>Exécutif</h3>
-              <a href="#">
-                <input type="submit" value="Continuer">
-              </a>
-            </div>
-            <div class="description">
-              <h3>Transporteur de Personnes</h3>
-              <a href="#">
-                <input type="submit" value="Continuer">
-              </a>
-            </div>
-          </div>
+        <form method="post" class="contact-child child2">
+          <div class="inside-contact">
+              <h2>RESERVATION</h2>
+              <h3>
+                  <span id="confirm">
 
+              </h3>
+              <div class="reserve1">
+                <input id="txt_name" name="nom" type="text" Required="required" placeholder="Nom">
+                <input id="txt_name" name="prenom" type="text" Required="required" placeholder="Prénom">
+                <input id="txt_email" name="email" type="text" Required="required" placeholder="Email">
+              </div>
+              <div class="reserve2">
+                <input id="txt_phone" name="numero" type="text" Required="required" placeholder="Numero">
+                <input id="text" name="pays" type="text" Required="required" placeholder="Pays de Résisence">
+                <select class="form-select" id="validationCustom04" required style="width: 30%; height: 2.8vh;">
+                  <option selected disabled value="">Choix...</option>
+                  <option value="Compacte">Compacte</option>
+                  <option value="Premium">Premium</option>
+                  <option value="Économic">Économic</option>
+                  <option value="Car">Car</option>
+                </select>
+              </div>
+              <input type="submit" id="btn_send" value="ENVOYER"  style="margin-left: 30%;">
+          </div>
+      </form>
+      <div style="display: flex; margin: 2% 0 0 8%;">
+        <div class="loc">
+          <div class="sous_loc" style="background-image: url(../../static/Images_1/economy.png); background-repeat: no-repeat; background-size: cover; "></div>
+          <div style="width: 100%; height: 7vh; background-color: #fff; text-align: center;">
+            <h6>Économique</h6>
+            <p>4 places <br> à partir de 2000fr</p>
+          </div>
         </div>
+        <div class="loc">
+          <div class="sous_loc" style="background-image: url(../../static/Images_1/premium.png); background-repeat: no-repeat; background-size: cover; "></div>
+          <div style="width: 100%; height: 7vh; background-color: #fff; text-align: center;">
+            <h6>Premium </h6>
+            <p>4 places  <br> à partir de 2000fr</p>
+          </div>
+        </div>
+        <div class="loc">
+          <div class="sous_loc" style="background-image: url(../../static/Images_1/lo3.jpg); background-repeat: no-repeat; background-size: cover; "></div>
+          <div style="width: 100%; height: 7vh; background-color: #fff; text-align: center;">
+            <h6>Car</h6>
+            <p>24 places <br> à partir de 2000fr</p>
+          </div>
+        </div>
+        <div class="loc">
+          <div class="sous_loc" style="background-image: url(../../static/Images_1/lo4.png); background-repeat: no-repeat; background-size: cover; "></div>
+          <div style="width: 100%; height: 7vh; background-color: #fff; text-align: center;">
+            <h6>Compacte</h6>
+            <p>4 places <br> à partir de 2000fr</p>
+          </div>
+        </div>
+      </div>
        </main>
        <footer>
         <ul>

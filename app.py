@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from datetime import timedelta
 
 
 app = Flask(__name__)
 db = SQLAlchemy()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'  # Configuration de la base de données SQLite
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=1)  # Durée de validité des messages flash en minutes
 
 app.secret_key = "votre_clé_secrète"
 
@@ -46,11 +48,11 @@ def coon():
 
         if user and user.password == password:
             # Connexion réussie, afficher un message flash avec le nom de l'utilisateur
-            flash(f'Bienvenue, {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
+            flash(f'Bienvenue M/Mme {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
             return render_template('HTML/taxi.html')
 
         # Informations de connexion invalides, afficher un message d'erreur
-        flash('Email ou mot de passe incorrect.')
+        flash('Email ou mot de passe incorrect.', 'error')
 
     return render_template('HTML/coon.html')
 
@@ -64,6 +66,7 @@ def inscri():
         new_user = User(name=name, email=email, password=password)
         db.session.add(new_user)
         db.session.commit()
+        flash('Inscription réussie. Vous pouvez maintenant vous connecter.', 'success')
         return render_template('HTML/coon.html')
     return render_template('HTML/inscri.html')
 
@@ -71,7 +74,7 @@ def inscri():
 def logout():
     # Supprimez l'utilisateur de la session pour le déconnecter
     db.session.pop('name', None)
-    flash('Vous avez été deconnecté avec succès!!!!')
+    flash('Vous avez été déconnecté avec succès!!!!', 'info')
     return redirect(url_for('coon'))
 
 
@@ -86,8 +89,9 @@ def contt():
 
         # Traitez les données du formulaire de contact, par exemple, envoyez un e-mail, enregistrez-les dans une base de données, etc.
 
-        thank_you_message = f"Merci {name} pour votre message. Nous vous contacterons bientôt."
-        return render_template('HTML/contt.html', thank_you_message=thank_you_message)
+        message = f"Merci {name} pour votre message. Nous vous contacterons bientôt."
+        flash(message, 'success')
+        return render_template('HTML/contt.html')
 
     return render_template('HTML/contt.html')
 
@@ -95,7 +99,6 @@ def contt():
 @app.route('/coon/taxi')
 def taxi():
     #flash(f'Bienvenue, {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
-            
     return render_template('HTML/taxi.html')
 
 
@@ -137,7 +140,20 @@ def rdv_voit_car():
     return render_template('HTML/voit_car.html')
 
 
-
+@app.route('/coon/taxi/reser_taxi', methods=['GET', 'POST'])
+def reser_taxi():
+    if request.method == 'POST':
+        nom = request.form.get('nom')
+        prenom = request.form.get('prenom')
+        email = request.form.get('email')
+        numero = request.form.get('numero')
+        pays = request.form.get('pays')
+        choix = request.form.get('choix')
+        
+        flash('Votre réservation a été prise en compte, nous vous contacterons sous peu!', 'success')
+        return render_template('HTML/reser_taxi.html')
+    
+    return render_template('HTML/reser_taxi.html')
 
 
 db.init_app(app)

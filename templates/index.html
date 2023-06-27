@@ -3,17 +3,17 @@
   <head>
     <meta charset ="utf-8">
     <meta name ="viewport" content="width=device-width, intial-scale=1">
-    <title>Custom Coding</title>
+   
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../static/CSS_1/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    <title>LOCATION VOITURE/CAR</title>
+    <title>ACCUEIL</title>
 </head>
     <body>
         <header style="height: 125px; background-color: #133f7e;">
-          <a href="#">
+          <a href="{{ url_for('index') }}">
             <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
           </a>
             <nav >
@@ -29,7 +29,7 @@
         <main>
                       
           <section class="hero">
-            <div class="background-image" style="background-image: url(../../static/Images/voiture.jpg) ;"></div>
+            <div class="background-image" style="background-image: url(../static/Images_1/bac3.jpg) ;"></div>
                 <div class="hero-content-area">
                 <h1 style="color: white">Re<span style="color: black;">Zer</span>V...</h1>
                 <h2> BIENVENUE DANS VOTRE PLATEFORME DE RESERVATION LA PLUS FIABLE</h2>
@@ -45,8 +45,8 @@
                   <div style="margin: 2%;">
                       <h5 style="color: black;">Devoilez des remises instantanées</h5>
                       <p>Economisez en moyenne 5% sur des <br> convoies avec les prix membres</p>
-                      <a href="#" style="color: #3f51b5;">S'inscrire gratuitement</a>
-                      <a href="#" style="color: #3f51b5;">Connexion</a>
+                      <a href="{{ url_for('inscri') }}" style="color: #3f51b5;">S'inscrire gratuitement</a>
+                      <a href="{{ url_for('coon') }}" style="color: #3f51b5;">Connexion</a>
                   </div>
                   <div style="margin: 2%;">
                       <h5 style="color: black;">L'annulation est gratuite</h5>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <header style="height: 125px; background-color: #133f7e;">
-    <a href="#">
+    <a href="{{ url_for('index') }}">
         <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
     </a>
     <nav>
@@ -23,23 +23,13 @@
     </nav>
 </header>
 
-<!-- ==== A REMPLIR POUR TOUTE LES PAGES ==== -->
+<!-- ==== A REMPLIR POUR TOUTES LES PAGES ==== -->
 <main>
     <div>
         <div class="container" id="container">
             <div class="form-container sign-in-container">
                 <form method="post" action="{{url_for('coon')}}">
-                  {{csrf_token}}
                     <h1>CONNEXION</h1>
-                      {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                            <ul class="flash-messages">
-                                {% for message in messages %}
-                                    <li>{{ message }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                      {% endwith %}
                     <input type="email" name="email" placeholder="Email" />
                     <input type="password" name="mot_de_passe" placeholder="Mot de Passe" />
                     <button type="submit">Connexion</button>
@@ -49,18 +39,16 @@
                 <div class="overlay">
                     <div class="overlay-panel overlay-right">
                         <h1 style="color: black;">Excellent!</h1>
-                        <p style="color: white;">Entrez vos données personnelles et connectez vous!</p>
+                        <p style="color: white;">Entrez vos données personnelles et connectez-vous !</p>
                         <a href="#"><button class="ghost" id="signUp">S'inscrire</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  </main>
+</main>
 
 <footer>
-    deteefefeyfgefehfeiufeufrfufyrfyrf
-    <hr>
     <ul>
         <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
