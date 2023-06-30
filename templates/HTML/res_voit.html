@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset ="utf-8">
+    <meta name ="viewport" content="width=device-width, intial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/CSS_1/res_voit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <title>RESERVATION TAXI</title>
+</head>
+<body>
+    <header style="height: 125px; background-color: #133f7e;">
+        <a href="{{ url_for('index') }}">
+          <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
+        </a>
+          <nav >
+            
+            <li><a href="#">Taxi-Aéroport/Car</a> </li> 
+            <li><a href="#" style="color: red; font-weight: 900;">Voiture</a> </li>
+            <li><a href="{{url_for('coon')}}" >Déconnexion</a> </li>
+              
+          </nav>
+      </header>
+       <main>
+        <form method="post" class="contact-child child2">
+          <div class="inside-contact">
+              <h2>RESERVATION</h2>
+              <h3>
+                  <span id="confirm">
+
+              </h3>
+              <div class="reserve1">
+                <input id="txt_name" name="nom" type="text" Required="required" placeholder="Nom">
+                <input id="txt_name" name="prenom" type="text" Required="required" placeholder="Prénom">
+                <input id="txt_email" name="email" type="text" Required="required" placeholder="Email">
+              </div>
+              <div class="reserve2">
+                <input id="txt_phone" name="numero" type="text" Required="required" placeholder="Numero">
+                <input id="text" name="pays" type="text" Required="required" placeholder="Pays de Résisence">
+                <select class="form-select" id="validationCustom04" required style="width: 30%; height: 2.8vh;">
+                  <option selected disabled value="">Classe...</option>
+                  <option value="Compacte">Standard</option>
+                  <option value="Premium">Luxe</option>
+                </select>
+              </div>
+              <input type="submit" id="btn_send" value="ENVOYER"  style="margin-left: 30%;">
+          </div>
+        </form>
+       </main>
+       <footer>
+        <ul>
+          <li><a href="url_for('res_voit')"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="url_for('res_voit')"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="url_for('res_voit')"><i class="fa fa-snapchat-square"></i></a></li>
+          <li><a href="url_for('res_voit')"><i class="fa fa-pinterest-square"></i></a></li>
+          <li><a href="url_for('res_voit')"><i class="fa fa-github-square"></i></a></li>
+        </ul>
+            <p style="margin-top: 3%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>
+      </footer>
+    
+</body>
+</html>

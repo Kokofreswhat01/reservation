@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&family=Tangerine:wght@400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7e7e7;
+}
+
+main{
+    flex-grow: 1;
+}
+
+form{
+    margin-top: 10%;
+}
+
+ul, nav {
+    list-style: none;
+}
+
+/* Nav-bar style */
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 0.75;
+    margin: 0 15px;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a.btn {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3f51b5;
+    opacity: 1;
+    margin-top: 10px;
+    color: white;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Header Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+    animation: fadein 1s 0.5s forwards;
+    opacity: 0.5;
+    color: white;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+header h2 {
+    font-family: "Quicksand", sans-serif;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    margin-right: -15px;
+}
+
+header nav li {
+    margin: 0 15px;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Content */
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins";
+}
+
+h4 {
+    font-size: 26px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.container{
+    margin-top: 0%;
+
+}
+
+.reserve1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserve2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-parent{
+    display:flex;
+    margin: 0 auto;
+    width: 50%;
+  }
+  
+  .contact-child{
+    display:flex;
+    flex:1;
+    box-shadow:0px 0px 10px -2px rgba(0,0,0,0.75);
+  }
+  
+  .child1{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    color:#fff;
+    padding:100px 0;
+  }
+  
+  .child1 p{
+    padding-left:20%;
+    font-size:20px;
+    text-shadow:0px 0px 2px #000;
+  }
+  
+  .child1 p span{
+    font-size:16px;
+    color:#3f51b5;
+  }
+  
+  .child2{
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  
+  .inside-contact{
+    width:90%;
+    margin-top:10%;
+  }
+  
+  .inside-contact h2{
+    text-transform:uppercase;
+    text-align:center;
+    margin-top:0px;
+  }
+  
+  .inside-contact h3{
+    text-align:center;
+    font-size:16px;
+    color:#0085e2;
+  }
+  
+  .inside-contact input{
+    width:32%;
+    background-color:#eee;
+    border:1px solid rgba(0,0,0,0.48);
+    padding:5px 10px;
+    margin-bottom:20px;
+  }
+  
+  .inside-contact input[type=submit]{
+    background-color:#3f51b5;
+    font-weight: 900;
+    color:#fff;
+    transition:0.2s;
+    border:2px solid #3f51b5;
+    margin:30px 0;
+  }
+  
+  .inside-contact input[type=submit]:hover{
+    background-color:#fff;
+    color:#3f51b5;
+
+    transition:0.2s;
+  }
+  
+  
+  @media screen and (max-width:991px){
+    .contact-parent{
+        display:block;
+        width:100%;
+    }
+  
+    .child1{
+        display:none;
+    }
+  
+    .child2{
+        background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+        background-size:cover;
+    }
+  
+    .inside-contact input{
+        background-color:#fff;
+    }
+  }
+
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 60px 0;
+    margin-top: 0%;
+    height: 220px;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+footer ul li {
+    margin: 0 8px;
+}
+
+footer ul li:first-child {
+    margin-left: 0;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+footer p a {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+
+    nav li a{
+        font-size: 12px;
+        margin: 1%;
+    }
+
+    h5,h4{
+        font-size: 12px;
+    }
+    
+    p{
+        font-size: 10px;
+    }
+
+    form{
+        margin-top: 50%;
+    }
+
+}

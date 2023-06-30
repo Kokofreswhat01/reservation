@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
+from flask_migrate import Migrate
 
 
 app = Flask(__name__)
 db = SQLAlchemy()
+migrate = Migrate(app, db)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'  # Configuration de la base de données SQLite
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=1)  # Durée de validité des messages flash en minutes
 
@@ -151,12 +153,26 @@ def reser_taxi():
         choix = request.form.get('choix')
         
         flash('Votre réservation a été prise en compte, nous vous contacterons sous peu!', 'success')
-        return render_template('HTML/reser_taxi.html')
+        return render_template('HTML/taxi.html')
     
     return render_template('HTML/reser_taxi.html')
+
+@app.route('/coon/taxi/voit_car/stock/res_voit', methods=['POST'])
+def res_voit():
+    # Access form data here
+    if request.method == 'POST':
+        nom = request.form['nom']
+        prenom = request.form['prenom']
+        email = request.form['email']
+        numero = request.form.get('numero')
+        pays = request.form.get('pays')
+        choix = request.form.get('choix')
+        flash('Votre réservation a été prise en compte, nous vous contacterons sous peu!', 'success')
+        return render_template('HTML/stock.html')
+    return render_template('HTML/res_voit.html')
 
 
 db.init_app(app)
 if __name__ == "__main__":
-    db.create_all()
+    
     app.run()

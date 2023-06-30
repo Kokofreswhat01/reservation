@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Custom Coding</title>
+    <title>CONNEXION</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -15,12 +15,7 @@
     <a href="{{ url_for('index') }}">
         <h2 style="color: whitesmoke; font-family: Poppins;">Re<span style="color: black;">Zer</span>V...</h2>
     </a>
-    <nav>
-        <li><a href="{{ url_for('index') }}">Accueil</a></li>
-        <li><a href="{{ url_for('contt') }}">Contact</a></li>
-        <li><a href="{{ url_for('inscri') }}">S'inscrire</a></li>
-        <li><a href="#" style="color: red;">Connexion</a></li>
-    </nav>
+
 </header>
 
 <!-- ==== A REMPLIR POUR TOUTES LES PAGES ==== -->
@@ -40,7 +35,7 @@
                     <div class="overlay-panel overlay-right">
                         <h1 style="color: black;">Excellent!</h1>
                         <p style="color: white;">Entrez vos données personnelles et connectez-vous !</p>
-                        <a href="#"><button class="ghost" id="signUp">S'inscrire</button></a>
+                        <a href="url_for{{'inscri'}}"><button class="ghost" id="signUp">S'inscrire</button></a>
                     </div>
                 </div>
             </div>
@@ -48,16 +43,7 @@
     </div>
 </main>
 
-<footer>
-    <ul>
-        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
-    </ul>
-    <p style="margin-top: 3%;">Copyright © 2013 - 2023 ReZerV... Tous droits réservés.</p>
-</footer>
+
 
 </body>
 </html>
