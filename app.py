@@ -100,7 +100,7 @@ def contt():
 
 @app.route('/coon/taxi')
 def taxi():
-    #flash(f'Bienvenue, {user.name} !!!! Vous pouvez poursuivre vos reservations!', 'success')
+    
     return render_template('HTML/taxi.html')
 
 
